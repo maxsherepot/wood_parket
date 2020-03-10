@@ -1,0 +1,90 @@
+<h2 class="mb-3">Контакти</h2>
+<div class="row">
+
+    <div class="col-md-9 mb-md-0 wow fadeInLeft">
+
+        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" id="name" name="name" class="form-control">
+                        <label for="name">Ваше ім'я</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" id="email" name="email" class="form-control">
+                        <label for="email">Ваш email</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="md-form mb-0">
+                        <input type="text" id="phone" name="phone" class="form-control">
+                        <label for="subject">Ваш телефон</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="md-form">
+                        <textarea id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                        <label for="message">Ваше повідомлення</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="text-center text-md-left">
+            <div class="row">
+                <div class="btn col-12 col-md-4" onclick="validateForm()">Відправити</div>
+            </div>
+
+        </div>
+        <div class="text-danger " id="status"></div>
+
+    </div>
+
+
+    <!---------------- Ярлики справа -->
+    <div class="col-md-3 text-center wow fadeInRight">
+        <ul class="list-unstyled mb-0">
+            <li>
+                <i class="fas fa-phone mt-4 fa-2x"></i>
+                <p class="mt-2 mb-0"> <a href="tel:+380997399108">(099) 739-91-08</a></p>
+                <p class="mb-2"> <a href="tel:+380676725961">(067) 672-59-61</a></p>
+            </li>
+
+            <li>
+                <i class="fas fa-envelope mt-4 fa-2x"></i>
+                <p>info@woodparket.com.ua</p>
+            </li>
+
+            <li>
+                <i class="fas fa-map-marker-alt mt-3 fa-2x"></i>
+                <p>Івано-Франківськ, <br> вул. Максимовича 14a</p>
+            </li>
+
+            <li>
+                <i class="fas fa-map-marker-alt mt-3 fa-2x"></i>
+                <p>Ужгород, <br> вул. Возз'єднання, <br> ТЦ "Dream Hall"</p>
+            </li>
+
+            <li>
+                <div class="mt-5">Ексклюзивний представник виробника в м.Ужгород: <br>
+                    Гутовський Антон Едуардович - </div>
+                <span class="mt-2 mb-4">
+                    <a href="tel:+380955573442">(095) 557-34-42</a>
+                </span>
+            </li>
+
+        </ul>
+    </div>
+    <!------------------------------->
+
+</div>

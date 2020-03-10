@@ -1,0 +1,232 @@
+$special_color: #51d803;
+$hover_color: #04a504;
+$text_light: #fff;
+$text_dark: rgb(0, 0, 0);
+$grad_color: rgb(156, 156, 156);
+
+
+body {
+    background: linear-gradient($grad_color 0%, darken($grad_color,80%) 10% , darken($grad_color,35%) 70%  ,darken($grad_color,70%) 80% ); 
+   color: #ffffff;
+   font-size: 1.05rem;
+}
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: $text_light;
+}
+
+h1, h2, h3, .nav {
+    font-family: 'Merriweather', serif;
+}
+
+.max {
+    display: none;
+}
+
+.btn {
+    background-color: $special_color;
+    color: $text_dark;
+    border-radius: 8px;
+    max-width: 150px;
+    &:hover {
+        background-color: $hover_color;
+    }
+}
+
+.fas {
+    font-size: 1.8rem;
+    color: $text_dark;
+}
+
+.up_arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    max-width: 50px;
+    color: $special_color;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+    font-size: 50px;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+//////////////////////////////  Navbar
+.navbar {
+    background-color: #fff; 
+    a {
+        color: $text_dark;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+            color: $hover_color;
+        } 
+    }
+}
+
+.logo {
+   max-width: 100%; 
+   width: 240px;
+}
+
+.navbar li {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 0%;
+        background-color: $hover_color;
+        height: 2px;
+        transition: .3s;
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+
+///////////////////////////  Main_title
+#main_title {
+    min-height:90vh;
+    color: $text_light;
+    background-image: url("../images/bg_picture.jpg"); 
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.main_points {
+    padding-left: 0;
+    list-style: none;   
+}
+
+.main_points li {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    &::before {
+        content:"✔";
+        color: $special_color;
+        margin-right: 0.5em;
+        font-weight: 900;
+    }
+} 
+
+/////////////////////////////  Benefits
+#benefits {
+    color: $text_dark;
+    color: #ffffff;
+}
+
+/////////////////////////////  Prices
+.img_block {
+    img {
+        max-width: 100%;
+    }
+    h3 {
+        color: $text_dark;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: -14px;
+}
+
+.text_block ul, .additional_services ul {
+    color: $special_color;
+}
+
+/////////////////////////  Форма
+#name + label, #email + label, #phone + label, 
+#message + label, a {
+    color: $text_light;
+}
+
+#name:focus, #email:focus, #phone:focus, #message:focus {
+    color: $special_color;
+    border-bottom-color: $hover_color;
+    box-shadow: 0 1px 0 0 $hover_color;
+    border-right: none;
+}
+
+#name, #email, #phone, #message {
+    border-bottom: 2px solid $special_color;
+}
+
+li .fas {
+    color: $special_color;
+}
+
+//////////////////////////// footer
+footer {
+    background-color: $special_color;
+    font-size: 1rem;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+
+///////////////////////  @media
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .logo {
+        width: 200px;
+     }
+
+    .main_points li {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 180px;
+     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .main_points li {
+        font-size: 1.1rem;
+    }
+}
